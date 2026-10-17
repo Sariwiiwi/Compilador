@@ -1,5 +1,6 @@
 name: Compilar ejecutable
-on: [push]
+on:
+  push:
 
 jobs:
   build-linux
