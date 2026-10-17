@@ -13,7 +13,7 @@ jobs:
       - run: pyinstaller --onefile comprova_desplegaments.py
 
       - name: Provar executable de Linux
-        run: ./dist/comprova_desplegaments --help
+        run: ./dist/comprova_desplegaments
   build-windows:
     runs-on: windows-latest
     steps:
