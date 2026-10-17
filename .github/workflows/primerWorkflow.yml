@@ -10,7 +10,7 @@ jobs:
         with:
           python-version: '3.12'
       - run: pip install pyinstaller
-      - run: pyinstaller --onefile ~/repoActions/comprova_desplegaments.py
+      - run: pyinstaller --onefile repoActions/comprova_desplegaments.py
   build-windows:
     runs-on: windows-latest
     steps:
