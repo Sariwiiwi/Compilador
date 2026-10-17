@@ -11,8 +11,20 @@ jobs:
           python-version: '3.12'
       - run: pip install pyinstaller
       - run: pyinstaller --onefile comprova_desplegaments.py
+
+      - name: Provar executable de Linux
+        run: ./dist/comprova_desplegaments --help
   build-windows:
     runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: pip install pyinstaller
+      - run: pyinstaller --onefile comprova_desplegaments.py
+  build-macos:
+    runs-on: macos-latest
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
