@@ -1,9 +1,8 @@
 name: Compilar ejecutable
-on:
-  push:
+on: [push]
 
 jobs:
-  build-linux
+  build-linux:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -12,7 +11,7 @@ jobs:
           python-version: '3.12'
       - run: pip install pyinstaller
       - run: pyinstaller --onefile comprova_desplegaments.py
-  build-windows
+  build-windows:
     runs-on: windows-latest
     steps:
       - uses: actions/checkout@v4
